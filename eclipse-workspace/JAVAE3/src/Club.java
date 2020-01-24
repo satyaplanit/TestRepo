@@ -68,12 +68,10 @@ public class Club  {
 		member.add(new Members("Christine", "Smith", 'F', "05-05-1962", "27 ", "Rosebank Gardens", "London", "London",
 				"E35EE", "United Kingdom", "New Zealand"));
 
-		// int i = 1;
 		String teamType, ageGroup;
 		int teamSize;
 
-		// do {
-		try {
+			try {
 			Scanner userInput = new Scanner(System.in);
 			do {
 				System.out.println("");
@@ -88,7 +86,7 @@ public class Club  {
 				}
 			} while (!teamType.matches("mixed|male|female"));
 
-			// System.out.println("teamtype " + teamType);
+			
 			do {
 				System.out.println(
 						"Which age Group are you creating a team for ? Enter 'j' for junior or 's' for senior ");
@@ -102,7 +100,7 @@ public class Club  {
 			teamSize = userInput.nextInt();
 
 			Team team = new Team();
-			// i = 2;
+		
 			try {
 				team.createTeam(teamType, teamSize, ageGroup);
 			} catch (Exception e) {
@@ -112,7 +110,7 @@ public class Club  {
 		} catch (Exception e) {
 			System.out.println("Please enter valid inputs");
 		}
-		// } while (i == 1);
+		
 	}
 
 }
